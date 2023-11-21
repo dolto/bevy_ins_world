@@ -11,6 +11,7 @@ mod animation_indices;
 mod inventory;
 mod setup;
 mod bee;
+mod unit_state;
 
 fn main() {
     App::new()
