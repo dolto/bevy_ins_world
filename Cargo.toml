@@ -1,0 +1,12 @@
+[package]
+name = "bevy_ins_world"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = {version = "0.12"}
+noise = "0.8.2"
+rand = "0.8.5"
+bevy_pancam = "0.10.0"
