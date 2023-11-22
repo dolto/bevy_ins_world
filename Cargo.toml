@@ -10,3 +10,7 @@ bevy = {version = "0.12"}
 noise = "0.8.2"
 rand = "0.8.5"
 bevy_pancam = "0.10.0"
+bevy-inspector-egui = "0.21.0"
+
+[profile.dev.package."*"]
+opt-level = 3

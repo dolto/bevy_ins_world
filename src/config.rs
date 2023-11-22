@@ -15,9 +15,12 @@ pub const NOISE_SCALE: f64 = 7.75;
 pub const MAP_W: i32 = 150;
 pub const MAP_H: i32 = 150;
 
+pub const UNIT_INTERACTIVE: f32 = 7.;
+
 pub const NAME_LIST: [&str; 5] = [
     "Coseven", "Rojalin", "Minsu", "Geadol", "Yoloi"
 ];
 pub const FLOWER_RES_GECHAR:i32 = 0;
 pub const MAKE_HONEY:i32 = 1;
 pub const MAKE_BEE_WAX:i32 = 2;
+pub const MAKE_COMB: i32 = 3;

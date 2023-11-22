@@ -1,10 +1,12 @@
 use bevy::{prelude::*, core_pipeline::clear_color::ClearColorConfig};
 use bevy_pancam::{PanCam, PanCamPlugin};
-use inventory::inventory_heal;
+use inventory::{inventory_heal, InventoryPlugin};
 use config::*;
 use animation_indices::*;
 use setup::gen_random_world;
 use bee::*;
+use unit_state::UnitStatePlugin;
+use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
 mod config;
 mod animation_indices;
@@ -16,12 +18,15 @@ mod unit_state;
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest())) // prevents blurry sprites
-        .add_plugins(PanCamPlugin::default())
-        .add_systems(Startup, setup)
-        .add_systems(Update, (
-            animate_sprite,
-            inventory_heal
+        .add_plugins((
+            PanCamPlugin::default(),
+            UnitStatePlugin,
+            InventoryPlugin,
+            AnimationIndicesPlugin,
+            WorldInspectorPlugin::new(),
+            BeePlugin
         ))
+        .add_systems(Startup, setup)
         .run();
 }
 
